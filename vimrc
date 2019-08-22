@@ -69,3 +69,34 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
+
+" ===
+" === NERDTree
+" ===
+map tt :NERDTreeToggle<CR>
+let NERDTreeAutoCenter = 1
+" 是否显示隐藏文件
+" let NERDTreeShowHidden = 1
+" 在终端启动vim时，共享NERDTree
+let g:nerdtree_tabs_open_on_console_startup = 1
+" 忽略一下文件的显示
+let NERDTreeIgnore = ['\.pyc','\~$','\.swp']
+" 显示书签列表
+let NERDTreeShowBookmarks = 1
+let NERDTreeMapActivateNode = "l"
+
+
+" ==
+" == NERDTree-git
+" ==
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
